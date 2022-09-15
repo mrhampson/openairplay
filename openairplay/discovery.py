@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import logging
 import sys
 try:
     import zeroconf
@@ -10,10 +10,9 @@ except ImportError:
 
 from PyQt5.QtCore import QObject, pyqtSignal
 
-from . import log, utils
-from .receiver_device import AirplayReceiver, AirplayFeatures
+from receiver_device import AirplayReceiver
 
-
+log = logging.getLogger(__name__)
 # global airplayReceivers
 # airplayReceivers = []
 #

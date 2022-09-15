@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 #  Copyright (C) 2015-2016 Ben Klein.
-
+import logging
 import sys
 
-from . import log
-from .receiver_device import AirplayReceiver
+from receiver_device import AirplayReceiver
 
-log.setLevel(log.DEBUG)
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 log.debug("Debugging enabled.")
 log.debug("Called with system args: " + str(sys.argv))
 log.debug("Python version: " + sys.version)
@@ -22,7 +22,7 @@ except ImportError:
     sys.exit("Could not import Python3 Qt Libraries.")
 
 # Airplay Things:
-from . import discovery
+import discovery
 
 class Window(QtWidgets.QWidget):
     def __init__(self):
