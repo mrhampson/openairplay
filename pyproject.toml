@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "openairplay"
+version = "0.1.0"
+description = "Enabling Airplay just like on Apple OSX on Ubuntu and possibly other non-apple OSes"
+authors = ["robobenklein", "mrhampson"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+PyQt5 = "^5.15.7"
+zeroconf = "^0.39.1"
+coloredlogs = "^15.0.1"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
