@@ -49,8 +49,7 @@ class AirplayServiceListener(QObject):
         info = zeroconf.get_service_info(type, name)
         # airplayReceivers.append(name)
         self.devices[name] = AirplayReceiver(
-            name, info,
-            # **{k.decode(): v.decode() for k, v in info.properties.items()}
+            name, info
         )
         log.debug(f"Airplay receiver '{name}' added, constructed: {self.devices[name]}")
         self.receiver_added.emit(self.devices[name])
